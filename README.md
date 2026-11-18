@@ -14,7 +14,7 @@ omarchy plugin add https://github.com/quacknode/omarchy-g14.git --enable
 
 Click the fan icon. Silent, Balanced, and Turbo are the firmware profiles Quiet, Balanced, and Performance. Draw a curve, then turn on "Use these curves". At high temperature the firmware can still hold a fan above a curve if the chip is overheating.
 
-The Armoury key is not part of the install. To bind it, add this to `~/.config/hypr/bindings.lua`:
+The M4 key (Armoury) is not part of the install. To bind it, add this to `~/.config/hypr/bindings.lua`:
 
 ```lua
 o.bind("code:156", "G14 controls", os.getenv("HOME") .. "/.config/omarchy/plugins/io.github.quacknode.g14/g14-toggle.sh")
