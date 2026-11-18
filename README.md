@@ -31,4 +31,5 @@ omarchy plugin remove io.github.quacknode.g14
 Delete `~/.config/autostart/g14.desktop` if it is there, and remove the key binding if you added one.
 
 
-<img width="388" height="1178" alt="image" src="https://github.com/user-attachments/assets/8078e3ca-e470-4d57-979b-599ff8fb8bf9" />
+<img width="766" height="1800" alt="image" src="https://github.com/user-attachments/assets/b93ac1f4-9cf7-4978-be39-237a4489169f" />
+
