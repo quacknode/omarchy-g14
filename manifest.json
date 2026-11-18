@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.quacknode.g14",
+  "name": "G14",
+  "version": "1.0.0",
+  "author": "Harry Callard",
+  "license": "MIT",
+  "description": "Fan curves, power limits, and charge control for the ROG Zephyrus G14.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "G14",
+    "description": "Draw CPU, GPU, and mid fan curves, and set power limits",
+    "category": "System",
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}
