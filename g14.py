@@ -25,6 +25,8 @@ def autostart_entry():
         "NoDisplay=true\n"
     )
 PROFILES = ("Quiet", "Balanced", "Performance")
+FANS = ("cpu", "gpu", "mid")
+DEFAULT_CURVE = "20c:0,55c:0,63c:40,70c:84,77c:128,85c:176,90c:209,95c:242"
 ATTRS = {
     "spl": "ppt_pl1_spl",
     "sppt": "ppt_pl2_sppt",
@@ -355,6 +357,13 @@ def cmd_boot():
         raise last
 
 
+def cmd_default(profile):
+    profile = canon(profile)
+    for fan in FANS:
+        run_ok(["asusctl", "fan-curve", "--mod-profile", profile, "--fan", fan, "--data", DEFAULT_CURVE])
+    run_ok(["asusctl", "fan-curve", "--mod-profile", profile, "--enable-fan-curves", "true"])
+
+
 def cmd_enable(profile, flag):
     value = "true" if str(flag).lower() in ("1", "true", "on", "yes") else "false"
     run_ok(["asusctl", "fan-curve", "--mod-profile", canon(profile), "--enable-fan-curves", value])
@@ -430,7 +439,7 @@ def main():
     elif cmd == "enable" and len(args) == 3:
         cmd_enable(args[1], args[2])
     elif cmd == "default" and len(args) == 2:
-        run_ok(["asusctl", "fan-curve", "--mod-profile", canon(args[1]), "--default"])
+        cmd_default(args[1])
     elif cmd == "limits" and len(args) >= 4 and len(args) % 2 == 0:
         pairs = list(zip(args[2::2], args[3::2]))
         apply_limits(pairs, canon(args[1]))
