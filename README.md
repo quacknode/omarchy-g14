@@ -1,4 +1,4 @@
-# G14
+<img width="776" height="2356" alt="image" src="https://github.com/user-attachments/assets/546fb7e0-71ca-4cd8-9cf7-0a30dee5dad0" /># G14
 
 Fan curves, power limits, and charge control for the ASUS ROG Zephyrus G14, on the Omarchy bar.
 
@@ -29,3 +29,6 @@ omarchy plugin remove io.github.quacknode.g14
 ```
 
 Delete `~/.config/autostart/g14.desktop` if it is there, and remove the key binding if you added one.
+
+
+<img width="776" height="2356" alt="image" src="https://github.com/user-attachments/assets/8078e3ca-e470-4d57-979b-599ff8fb8bf9" />
