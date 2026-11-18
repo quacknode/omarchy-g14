@@ -1,6 +1,8 @@
-Fan curves, power limits, and charge control for the ASUS ROG Zephyrus G14, on the Omarchy bar.
+Lightweight toolbar plugin for fan curves, power limits, and charge control on the ASUS ROG Zephyrus G14.
 
 Needs [asusctl](https://gitlab.com/asus-linux/asusctl). Written for the GA403, which has CPU, GPU, and mid fans.
+
+Matches to your system's theme and provides the same functionality as G-helper.
 
 ## Install
 
